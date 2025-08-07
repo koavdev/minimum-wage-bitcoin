@@ -1,0 +1,30 @@
+# Rust (backend) specific ignores
+/backend/target/
+/backend/**/*.rs.bk
+/backend/Cargo.lock
+
+# SvelteKit (frontend) specific ignores
+/frontend/node_modules/
+/frontend/build/
+/frontend/.svelte-kit/
+/frontend/.vercel/
+/frontend/.netlify/
+/frontend/.env
+/frontend/.env.*
+/frontend/package-lock.json
+/frontend/yarn.lock
+/frontend/.turbo/
+/frontend/.cache/
+
+# General ignores
+.DS_Store
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+Thumbs.db
+
