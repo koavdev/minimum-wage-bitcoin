@@ -6,5 +6,6 @@ edition = "2024"
 [dependencies]
 axum = "0.8.4"
 hyper = "1.6.0"
+reqwest = "0.12.22"
 tokio = { version = "1.47.1", features = ["full"] }
 tower-http = { version = "0.6.6", features = ["cors", "trace"] }
