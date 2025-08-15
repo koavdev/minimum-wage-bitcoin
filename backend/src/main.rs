@@ -10,6 +10,7 @@ use tower_http::{
     cors::CorsLayer,
     trace::TraceLayer,
 };
+mod currency_routes;
 
 async fn health() -> &'static str {
     "OK"
@@ -25,7 +26,7 @@ fn init_router() -> Router {
 
     Router::new()
         .route("/health", get(health))
-        // Adiciona middleware de segurança
+        .merge(currency_routes::currency_routes())
         .layer(cors)
         .layer(TraceLayer::new_for_http()) // Logging
 }
