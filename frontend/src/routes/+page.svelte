@@ -1,7 +1,9 @@
 <script lang="ts">
-    import Button from "$lib/components/ui/button/button.svelte";
+  export let data: { wageData: any };
 </script>
 
-<div class="bg-primary">
-    <Button variant="destructive">Test</Button>
-</div>
+{#if data?.wageData}
+  <pre>{JSON.stringify(data.wageData, null, 2)}</pre>
+{:else}
+  <p>Carregando ou sem dados</p>
+{/if}
